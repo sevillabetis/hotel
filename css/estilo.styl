@@ -1,3 +1,13 @@
+efectoEncabezado($grados,$color='red')
+	content ""
+	position absolute
+	z-index -1
+	top 0
+	height 100%
+	width: 50%
+	background: $color
+	-webkit-transform:skew(0deg,$grados)
+
 html, body
 	height 100%
 	margin: 0
@@ -5,6 +15,23 @@ html, body
 	max-width: 100%
 	
 header
+	position fixed
+	width 100%
+	&:before
+		left 0
+		efectoEncabezado(5deg,#0000)
+		
+	&:after
+		content ""
+		position absolute
+		z-index -1
+		top 0
+		height 100%
+		width: 50%
+		background: rgba(black,0.8)
+		right 0
+		-webkit-transform:skew(0deg,-5deg)
+
 	nav ul
 		margin 0
 		li
