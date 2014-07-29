@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+header nav ul {
+  margin: 0;
+}
+header nav ul li {
+  display: inline-block;
+}
