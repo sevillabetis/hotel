@@ -1,4 +1,14 @@
-efectoEncabezado($grados,$color='red')
+fuentes = Bebas-Neue Socialico
+for font in fuentes
+	@font-face
+		font-family: font
+		font-style: normal
+		font-weight: normal
+		src:url('../font/'+ font +'.eot')
+		src:url('../font/'+ font +'.otf')
+		src:url('../font/'+ font +'.ttf')
+
+efectoEncabezado($grados,$color=red)
 	content ""
 	position absolute
 	z-index -1
@@ -13,26 +23,52 @@ html, body
 	margin: 0
 	padding: 0
 	max-width: 100%
+
+.callig
+	font-family: Calligraffitti, cursive
 	
 header
 	position fixed
 	width 100%
+	top -9em
+	text-align: center
+	transition all 0.4s
+	
+	&:hover
+		top -6em
 	&:before
 		left 0
-		efectoEncabezado(5deg,#0000)
+		efectoEncabezado(5deg,#000)
 		
 	&:after
-		content ""
-		position absolute
-		z-index -1
-		top 0
-		height 100%
-		width: 50%
-		background: rgba(black,0.8)
 		right 0
-		-webkit-transform:skew(0deg,-5deg)
+		efectoEncabezado(-5deg,#000)
+		
 
 	nav ul
 		margin 0
+		padding-bottom 1em
 		li
 			display inline-block
+			padding 0 10px
+		a
+			color #f7f7f7
+			text-decoration: none
+			font-weight: bold
+
+	.logo
+		background-color: #000
+		position relative
+		width 15%
+		text-align: center
+		min-width 100px
+		max-width 100%
+		left 43%
+		height 100px
+		top 140px
+		z-index 5
+		border-radius: 5em 0
+		img
+			margin-top: 4px
+			width 100px
+			
