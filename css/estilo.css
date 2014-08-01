@@ -95,7 +95,7 @@ header .logo img {
 .slider_container {
   position: fixed;
   overflow: hidden;
-  top: 100px;
+  top: 0px;
   left: 0;
   z-index: -2;
   background-color: #000;
@@ -108,4 +108,7 @@ header .logo img {
   display: inline-block;
   background-color: #fff;
   margin-right: -5px;
+  vertical-align: top;
+  background-size: 100%;
+  background-position: bottom;
 }
