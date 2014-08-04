@@ -1,5 +1,12 @@
 var pos = 0;
 var intv;
+var flippedElement;
+var opcionesHoteles = [{opciones:[{opcion:'Cuarto individual'},{opcion:'Alberca privada'},
+					 {opcion:'Jacuzzi con burbujas'}],costo: '350',paquete:'Paquete medio'},
+					 {opciones:[{opcion:'Cuarto individual'},{opcion:'Alberca privada'},
+					 {opcion:'Jacuzzi de plata'}],costo: '500',paquete:'Paquete premium'},
+					 {opciones:[{opcion:'Cuarto individual'},
+					 {opcion:'Alberca privada'},{opcion:'Jacuzzi'}],costo: '300',paquete:'Paquete económico'}];
 
 $(document).on('ready',function(){
 	init();
@@ -8,12 +15,29 @@ $(document).on('ready',function(){
 function init(){
 	$('.slider_controls li').on('click',handleClick);
 	var width = $('.slider_container').width();
+
 	$('.slide').each(function(i,e){
 		var url = $(e).data('background');
 		$(e).css('width',width+'px');
 		$(e).css('background-image',"url("+(url+".jpg")+")");
 	});
+
+	$(document).on('click','.ver-mas',flipElement);
+
 	intv = setInterval(handleClick,5000);
+}
+
+function flipElement(){
+	var padre = $(this).parent();
+	flippedElement = padre;
+	$('#precioTemplate').template("CompiledTemplate");
+	$(padre).flip({
+		direction: 'rl',
+		speed: 500,
+		content: $('#precioTemplate').tmpl(opcionesHoteles[$(this).data('number')]).html(),
+		color: '#f7f7f7'
+
+	});
 }
 
 function handleClick(){

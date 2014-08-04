@@ -76,6 +76,24 @@
                 <img src="img/DSCN1127.jpg">
             </div> 
         </section>
+
+
+        <script type="text/x-jquery-tmpl" id='precioTemplate'>
+            <div>
+                <div class="ribbon"></div>
+                <h3>${paquete}</h3>
+                <p><strong>Contenido del paquete</strong></p>
+                <ol>
+                    {{each opciones}}
+                        <li>${opcion}</li>
+                    {{/each}}
+                </ol>
+                <p class="costo">${costo}</p>
+                <a  id="regresar-ventana">Regresar</a>
+            </div>
+
+        </script>
+        
         <section id="costos" class="fullScreen callig">
             <div class="marginTop">
                 <div class="precio">
@@ -83,21 +101,21 @@
                     <h3>Paquete basico</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ducimus?</p>
                     <p class="costo">300</p>
-                    <a href="#" class="ver-mas">Conoce mas</a>
+                    <a  class="ver-mas" data-number='0'>Conoce mas</a>
                 </div>
                 <div class="precio">
                     <div class="ribbon"></div>
                     <h3>Paquete basico</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quasi.</p>
                     <p class="costo">300</p>
-                    <a href="#" class="ver-mas">Conoce mas</a>
+                    <a  class="ver-mas" data-number='1'>Conoce mas</a>
                 </div>
                 <div class="precio">
                     <div class="ribbon"></div>
                     <h3>Paquete basico</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <p class="costo">300</p>
-                    <a href="#" class="ver-mas">Conoce mas</a>
+                    <a  class="ver-mas" data-number='2'>Conoce mas</a>
                 </div>
             </div>
         </section>
@@ -105,6 +123,10 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script src='http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js'></script>
+        <script src="js/jquery.ui.core.min.js"></script>
+        <script src="js/jquery.ui.effect.min.js"></script>
+        <script src="js/jquery.flip.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

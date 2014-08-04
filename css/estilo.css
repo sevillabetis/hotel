@@ -71,6 +71,7 @@ body {
 #costos .precio .ver-mas {
   margin-top: 30px;
   display: block;
+  cursor: pointer;
 }
 #cuartos {
   position: relative;
