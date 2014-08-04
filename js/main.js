@@ -13,7 +13,7 @@ function init(){
 		$(e).css('width',width+'px');
 		$(e).css('background-image',"url("+(url+".jpg")+")");
 	});
-	intv = setInterval(handleClick,3000);
+	intv = setInterval(handleClick,5000);
 }
 
 function handleClick(){
@@ -22,7 +22,7 @@ function handleClick(){
 		slide_target = $(this).index();
 		pos = slide_target;
 		clearInterval(intv);
-		intv = setInterval(handleClick,3000);
+		intv = setInterval(handleClick,5000);
 		
 	}
 	else {
