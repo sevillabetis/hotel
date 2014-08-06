@@ -73,6 +73,31 @@ body {
   display: block;
   cursor: pointer;
 }
+#buffet {
+  position: relative;
+}
+#buffet .image_food {
+  z-index: 20;
+  position: absolute;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  transition: all 1s ease-in;
+  background-size: 100%;
+  background-position: 50%;
+  cursor: pointer;
+}
+#buffet .viewport {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  transition: all 1s ease-in;
+  cursor: auto;
+}
 #cuartos {
   position: relative;
 }
@@ -203,6 +228,11 @@ header .logo img {
 }
 .mensajePrincipal p {
   font-weight: bolder;
+}
+#regresar-ventana {
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
 }
 .ribbon {
   width: 117%;
