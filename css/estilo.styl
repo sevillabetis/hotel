@@ -28,6 +28,14 @@ html, body
 	padding: 0
 	max-width: 100%
 
+a
+	color inherit
+	text-decoration none 
+	&:visited
+		color inherit
+	&:hover
+		color inherit
+
 .callig
 	font-family: Calligraffitti, cursive
 
@@ -97,7 +105,33 @@ html, body
 		border-radius 0px
 		transition all 1s ease-in
 		cursor auto
-	
+#contacto
+	background: url(../img/DSCN1218.jpg);
+	background-size: 100% auto
+	text-align center
+	.marginTop
+		padding-top: 6em
+	.social
+		font-size: 4em
+		transition all 0.4s
+		cursor pointer
+		&:hover
+			color blue
+			text-shadow: 0px 0px 2px #000
+
+	p
+		font-size: 1.5em
+		color #222
+		text-shadow: 0px 0px 2px #000
+		background-color rgba(250, 250, 250, 0.7)
+		margin 0
+	h3
+		font-size: 1.8em
+		line-height 0.8em
+		background: #f7f7f7
+		color blue
+		padding 0.2em
+
 #cuartos
 	position relative
 
@@ -233,4 +267,5 @@ header
 			background-size: 100%
 			background-position: bottom
 			
-			
+.social
+	font-family: 'Socialico'			
