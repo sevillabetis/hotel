@@ -32,6 +32,17 @@ function init(){
 
 	intv = setInterval(handleClick,5000);
 }
+google.maps.event.addDomListener(window,'load',drawMap);
+function drawMap(){
+	var mapa;
+	var opcionesMapa = {
+		zoom: 15,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	mapa = new google.maps.Map(document.getElementById('google_canvas'),opcionesMapa);
+
+}
+
 function changeViewPort(){
 	var e = $('.viewport');
 	e.css('top',$(e).data('top'));
