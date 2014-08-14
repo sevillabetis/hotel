@@ -31,12 +31,12 @@
 
             <div class="navigation">
                <nav class="callig">
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Costos</a></li>
-                        <li><a href="#">Cuartos</a></li>
-                        <li><a href="#">Contacto y Reservaciones</a></li>
-                        <li><a href="#">Buffet</a></li>
+                    <ul id='navegacionPrincipal'>
+                        <li><a href="#index">Inicio</a></li>
+                        <li><a href="#costos">Costos</a></li>
+                        <li><a href="#cuartos">Cuartos</a></li>
+                        <li><a href="#contacto">Contacto y Reservaciones</a></li>
+                        <li><a href="#buffet">Buffet</a></li>
                     </ul>
                 </nav>
             </div>
@@ -94,23 +94,23 @@
 
         </script>
         
-        <section id="costos" class="fullScreen callig">
+        <section id="costos" class="fullScreen callig" data-stellar-background-ratio="0.5">
             <div class="marginTop">
-                <div class="precio">
+                <div class="precio" data-stellar-ratio="2.09"> 
                     <div class="ribbon"></div>
                     <h3>Paquete basico</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ducimus?</p>
                     <p class="costo">300</p>
                     <a  class="ver-mas" data-number='0'>Conoce mas</a>
                 </div>
-                <div class="precio">
+                <div class="precio" data-stellar-ratio="1.5" data-stellar-vertical-offset="1450">
                     <div class="ribbon"></div>
                     <h3>Paquete basico</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quasi.</p>
                     <p class="costo">300</p>
                     <a  class="ver-mas" data-number='1'>Conoce mas</a>
                 </div>
-                <div class="precio">
+                <div class="precio" data-stellar-ratio="3" data-stellar-vertical-offset="-550">
                     <div class="ribbon"></div>
                     <h3>Paquete basico</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -127,7 +127,7 @@
             <div class="image_food" data-background='img/DSCF0330'></div>
         </section>
 
-        <section class="fullScreen" id="contacto">
+        <section class="fullScreen" id="contacto" data-stellar-background-ratio="0.2">
             <div class="marginTop callig">
                 <h1>Contacto</h1>
                 <div class="half">
@@ -140,7 +140,7 @@
                     <p>Telefono 232344223</p>
                 </div>
                 <div class="half">
-                    <div id="google_canvas">
+                    <div id="google_canvas" data-stellar-ratio="2.08">
                          
                     </div>
                 </div>
@@ -155,6 +155,10 @@
         <script src="js/jquery.ui.core.min.js"></script>
         <script src="js/jquery.ui.effect.min.js"></script>
         <script src="js/jquery.flip.min.js"></script>
+        <script src="js/scrollto.min.js"></script>
+        <script src="js/localscroll.min.js"></script>
+        <script src="js/stellar.min.js"></script>
+        <script src="js/jquery.scrollorama.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -113,6 +113,11 @@ a:hover {
   background-size: 100% auto;
   text-align: center;
 }
+#contacto h1,
+#contacto .social {
+  color: #f7f7f7;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+}
 #contacto .marginTop {
   padding-top: 6em;
 }
@@ -147,6 +152,7 @@ a:hover {
   height: 100%;
   padding: 0;
   margin: 0;
+  background-attachment: fixed;
 }
 #google_canvas {
   width: 100%;

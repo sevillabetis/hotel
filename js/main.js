@@ -13,6 +13,11 @@ $(document).on('ready',function(){
 });
 
 function init(){
+	$.stellar({
+		'horizontalScrolling': false,
+		hideDistantElements: false
+	});
+	$('#navegacionPrincipal').localScroll();
 	$('.slider_controls li').on('click',handleClick);
 	var width = $('.slider_container').width();
 
@@ -40,7 +45,42 @@ function drawMap(){
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	mapa = new google.maps.Map(document.getElementById('google_canvas'),opcionesMapa);
+	navigator.geolocation.getCurrentPosition(function(posicion){
+		var geolocalizacion = new google.maps.LatLng(posicion.coords.latitude, posicion.coords.longitude);
+		var marcador = new google.maps.Marker({
+			map: mapa,
+			draggable: true,
+			position:geolocalizacion,
+			visible:true
+		});
+		marcador.setTitle('Direccion usuario');
+		mapa.setCenter(geolocalizacion);
+		calcRoute(geolocalizacion,mapa);
 
+	});
+}
+
+function calcRoute(inicioRuta,mapa){
+	var directionsService = new google.maps.DirectionsService();
+	var directionsRenderer = new google.maps.DirectionsRenderer();
+	directionsRenderer.setMap(mapa);
+	var posicionHotel = new google.maps.LatLng(37.385422,-5.993906);
+	var marcador = new google.maps.Marker({
+			map: mapa,
+			draggable: true,
+			position:posicionHotel,
+			visible:true
+		});
+	var request = {
+		origin: inicioRuta,
+		destination: posicionHotel,
+		travelMode: google.maps.DirectionsTravelMode.DRIVING
+	}
+	directionsService.route(request,function(response,status){
+		if(status == google.maps.DirectionsStatus.OK){
+			directionsRenderer.setDirections(response);
+		}
+	});
 }
 
 function changeViewPort(){
